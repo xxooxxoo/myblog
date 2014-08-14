@@ -1,0 +1,11 @@
+- if @category.articles.present?
+  - @category.articles.each do |article|
+    label 标题：
+    = article.title
+    br
+    labrl 内容:
+    = article.content
+    hr
+- else
+  | 没有文章哦!!!
+

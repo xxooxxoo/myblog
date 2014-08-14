@@ -1,0 +1,13 @@
+= form_for([:backend, @article]) do |f|
+  .form-group
+    label 文章类别
+    = f.select :category_id
+      = options_from_collection_for_select(@categories, :id, :name)
+  .form-group
+    label 文章标题
+    = f.text_field :title, class:"form-control"
+  .form-group
+    label 文章内容
+    = f.text_area :content, class:"form-control"
+  .form-group
+    = f.submit '保存', class:"btn btn-info"
