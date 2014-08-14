@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-
+gem 'devise'
+gem 'cancan'
+gem 'rolify'
 gem 'bootstrap-sass'
 gem 'slim'
 gem 'slim-rails'
