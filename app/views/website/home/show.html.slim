@@ -1,7 +1,7 @@
 - if @category.articles.present?
   - @category.articles.each do |article|
     label 标题：
-    = article.title
+    = link_to "#{article.title}", show_article_website_home_path(article.id)
     br
     labrl 内容:
     = article.content

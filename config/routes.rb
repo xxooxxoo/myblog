@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   namespace :website do
-    resources :home
+    resources :home do
+      member do
+        get :show_article
+        post :create_comment
+      end
+    end
   end
 
   namespace :backend do
